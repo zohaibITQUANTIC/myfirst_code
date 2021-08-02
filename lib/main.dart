@@ -14,29 +14,51 @@ class homepage extends StatelessWidget {
         appBar: AppBar(
           title: Text("My first app"),
         ),
-        body: Center(
-          child: Container(
-            padding: const EdgeInsets.all(8),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Align(
             alignment: Alignment.center,
-            height: 100,
-            width: 100,
-            child: Text(
-              'I am a box',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
+            child: Container(
+              width: 200,
+              height: 400,
+              color: Colors.black,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      color: Colors.red,
+                      padding: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 100,
+                      width: 100,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 100,
+                      width: 100,
+                      color: Colors.yellow,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: const EdgeInsets.all(8),
+                      alignment: Alignment.center,
+                      height: 100,
+                      width: 100,
+                      color: Colors.green,
+                    ),
+                  ),
+                ],
               ),
-              textAlign: TextAlign.center,
             ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.teal,
-                gradient: LinearGradient(colors: [Colors.yellow, Colors.pink]),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.grey, blurRadius: 5, offset: Offset(2, 5))
-                ]),
           ),
         ));
   }
